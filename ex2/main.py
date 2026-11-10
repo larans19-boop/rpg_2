@@ -1,11 +1,3 @@
-"""
-main.py - Exercício 2: loja do jogo.
-
-Usa os módulos arquivos.py (JSON) e loja.py (regras da loja).
-O herói fica salvo no arquivo heroi.json: ao fechar e abrir de novo,
-o ouro e o inventário continuam iguais.
-"""
-
 import arquivos
 import loja
 
@@ -22,8 +14,7 @@ def ler_quantidade():
         return 1
     if texto.isdigit():
         return int(texto)
-    return 0                     # loja.comprar/vender vão recusar
-
+    return 0                    
 
 def main():
     catalogo = arquivos.carregar_json(ARQ_CATALOGO, [])
