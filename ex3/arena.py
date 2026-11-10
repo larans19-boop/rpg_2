@@ -1,12 +1,3 @@
-"""
-arena.py - Exercício 3: programa principal da arena.
-
-Junta tudo o que foi feito:
-  - batalha.py  (Exercício 1) faz a luta;
-  - arquivos.py (Exercício 2) lê e grava JSON (herói, inimigos, ranking);
-  - banco.py    (Exercício 3) guarda cada partida no banco arena.db.
-"""
-
 import arquivos
 import batalha
 import banco
@@ -30,8 +21,7 @@ def escolher_inimigo(inimigos):
 
 
 def lutar(conn, heroi, inimigo):
-    """Faz uma batalha, registra no banco e atualiza o herói (poções e ouro)."""
-    # dict(...) faz uma CÓPIA: a vida do herói e do inimigo volta cheia na próxima luta
+
     lutador = dict(heroi)
     lutador["vida"] = heroi["vida_max"]
     oponente = dict(inimigo)
@@ -43,7 +33,7 @@ def lutar(conn, heroi, inimigo):
     banco.registrar_partida(conn, heroi["nome"], inimigo["nome"], final["resultado"],
                             final["turnos"], final["vida_restante"])
 
-    # poções usadas saem do inventário
+
     if final["pocoes"] > 0:
         heroi["inventario"][POCAO] = final["pocoes"]
     elif POCAO in heroi["inventario"]:
