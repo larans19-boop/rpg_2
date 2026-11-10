@@ -1,8 +1,3 @@
-"""
-testes_ex3.py - Rode este arquivo para conferir o banco.py.
-Os testes usam um banco em memória: o seu arena.db não é alterado.
-"""
-
 import os
 import tempfile
 
