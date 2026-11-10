@@ -1,8 +1,3 @@
-"""
-testes_ex1.py - Rode este arquivo para conferir as suas funções do batalha.py.
-Cada linha mostra OK (certo) ou ERRO (com o valor esperado e o que veio).
-"""
-
 import batalha
 
 acertos = 0
