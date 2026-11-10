@@ -1,8 +1,3 @@
-"""
-testes_ex2.py - Rode este arquivo para conferir arquivos.py e loja.py.
-Os testes usam arquivos temporários: o seu heroi.json não é alterado.
-"""
-
 import os
 import tempfile
 
